@@ -1,0 +1,98 @@
+body {
+  background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2018/01/09/1187736/0d291a1a458e0cf7adf835bac80cabcb.jpg');
+}
+
+h1 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: auto;
+  text-decoration: underline;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  width: 40%;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+table td {
+  text-align: center;
+  border: 2px solid white;
+  padding: 20px;
+  color: white;
+}
+
+td a {
+  color: white;
+}
+
+body button {
+  padding: 8px;
+  border: 2px solid red;
+  position: relative;
+  left: 80%;
+  bottom: 50px;
+  background-color: yellow;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  box-sizing: border-box;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 70px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 20px;
+  position: absolute;
+  color: white;
+  font-family: cursive;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  background-color: black;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+  padding-left: 20px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
