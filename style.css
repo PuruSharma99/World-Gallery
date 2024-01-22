@@ -1,97 +1,186 @@
+/* Index HTML page styling here */
+
 body {
-  background-image: url('images/sunset.jpg');
-}
-
-h1 {
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  padding: auto;
-}
-
-h2 {
-  text-align: center;
-  color: white;
-}
-
-table {
-  border-spacing: 0px;
-  border-collapse: collapse;
-  width: 40%;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-}
-table td {
-  text-align: center;
-  border: 2px solid white;
-  padding: 20px;
-  color: white;
-}
-
-td a {
-  color: white;
-}
-
-body button {
-  padding: 8px;
-  border: 2px solid red;
-  position: relative;
-  left: 80%;
-  bottom: 50px;
-  background-color: yellow;
-}
-
-.container {
-  display: flex;
-  width: 90vw;
-  box-sizing: border-box;
-}
-
-.panel {
-  background-size: auto 100%;
-  background-position: left;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 70px;
-  color: #fff;
-  cursor: pointer;
-  flex: 0.5;
-  margin: 10px;
-  position: relative;
-  transition: flex 0.7s ease-in;
-}
-
-.panel h3 {
-  font-size: 20px;
-  position: absolute;
-  color: white;
-  font-family: cursive;
-  bottom: 20px;
-  left: 20px;
+  font-family: "Lato", sans-serif;
   margin: 0;
-  opacity: 0;
-  background-color: black;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
 }
 
-.panel.active {
-  flex: 5;
+.heading {
+  text-align: center;
+  font-size: 40px;
+  margin: 20px 0px;
+  color: #333;
 }
 
-.panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
-  padding-left: 20px;
+.places-det {
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
 }
 
-@media (max-width: 480px) {
-  .container {
-    width: 100vw;
+.places-det p {
+  margin-bottom: 15px;
+}
+
+.places-det strong {
+  color: #e74c3c; /* Red color for emphasis */
+}
+
+.places-det::first-letter {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-right: 4px;
+  color: #3498db; /* Blue color for the first letter */
+}
+
+@media (max-width: 768px) {
+  .places-det {
+    padding: 15px;
   }
+}
 
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
+.country-name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.countries-list {
+  width: 300px;
+  margin: 15px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.countries-list:hover {
+  transform: scale(1.05);
+}
+
+.countries-list img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countries-list a {
+  text-decoration: none;
+}
+
+.countries-list div {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .countries-list {
+    width: 100%;
+  }
+}
+
+/* Countries list HTML styling here */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header div {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.header button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header button:hover {
+  background-color: #45a049;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-link:hover {
+  background-color: #45a049;
+}
+
+.places {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.place-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.place-card:hover {
+  transform: scale(1.05);
+}
+
+.place-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.descr {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+  .place-card {
+    max-width: 100%;
   }
 }
